@@ -1,0 +1,60 @@
+{
+	"events" : {
+		"-K2ib4H77rj0LYewF7dP" : {
+			"name":"Nacional vs Medellin",
+			"owner":"ad@min.com",
+			"description":"Encuentro deportivo",
+			"picture":"nalvsmed",
+			"date":"4/12/2017",
+			"latitude":6.2572106,
+			"longitude":-75.591042,
+			"location":"Unidad+Deportiva+Estadio+Atanasio+Girardot",
+			"score":3
+		},
+		"-K2ib5JHRbbL0NrztUfO" : {
+			"name":"Trapitos al sol",
+			"owner":"ad@min.com",
+			"description":"Obra de teatro el aguila descalza",
+			"picture":"aguiladescalza",
+			"date":"3/22/2017",
+			"latitude":6.2546893,
+			"longitude":-75.5627941,
+			"location":"Teatro+Prado+el+Aguila+Descalza",
+			"score":4
+		},
+		"-K2ib4H78sj0LYewF7dP" : {
+			"name":"Caminata parque arví­",
+			"owner":"ad@min.com",
+			"description":"Caminata por los senderos",
+			"picture":"arvi",
+			"date":"1/6/2017",
+			"latitude":6.2891132,
+			"longitude":-75.5115368,
+			"location":"Parque+Arví",
+			"score":5
+			
+		},
+		"-K2ib5JHabbL0NrztUfO" : {
+			"name":"Ciclopaseo parque arví",
+			"owner":"ad@min.com",
+			"description":"Paseo en bicicleta por los senderos",
+			"picture":"arvi",
+			"date":"8/7/2017",
+			"latitude":6.2891132,
+			"longitude":-75.5115368,
+			"location":"Parque+Arví",
+			"score":5
+		},
+		"-K2ib4Hjh430LYewF7dP" : {
+			"name":"Carrera patinaje",
+			"owner":"ad@min.com",
+			"description":"Campeonato nacional de pista",
+			"picture":"clubpaen",
+			"date":"26/8/2017",
+			"latitude":6.1689853,
+			"longitude":-75.5980797,
+			"location":"Club+de+Patinaje+Envigado",
+			"score":4
+		}
+	}
+}

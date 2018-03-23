@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            {{ event.name }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <img src="{{ getResizedPicture(event?.picture) }}" >
+        <ion-card-content>
+            <ion-card-title>
+                {{ cleanText(event.location) }}
+            </ion-card-title>
+            <p>{{event.description}}</p>
+            <ion-note>
+                {{ formatDate(event.date) | date:'fullDate' }}
+            </ion-note>
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="star"></ion-icon>
+                    <div>{{ event.score }} Puntos</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small (click)="openMap()">
+                    <ion-icon name="map"></ion-icon>
+                    <div>ir</div>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

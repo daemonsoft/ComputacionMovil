@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">A la orden!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="sign_out">Cerrar sesión</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="settings">Configuración</string>
+    <string name="no_account_yet_create_one">¿No tiene cuenta? Regístrese</string>
+    <string name="create_account">Registrarse</string>
+    <string name="already_a_member_login">¿Ya es miembro? Ingresar</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="name">Nombre</string>
+    <string name="creating_account">Creando cuenta…</string>
+    <string name="creating_event">Creando evento…</string>
+    <string name="keep_logged">Mantener sesión</string>
+    <string name="action_sign_out">Cerrar sesión</string>
+    <string name="auth">Autenticando…</string>
+    <string name="account_created">Cuenta creada</string>
+    <string name="login_failed">Ingreso fallido</string>
+    <string name="enter_valid_email">Ingrese un email válido</string>
+    <string name="between_chars">Debe ser entre 4 y 10 caracteres</string>
+    <string name="events">Eventos</string>
+    <string name="least_chars">Debe usar al menos 3 caracteres</string>
+    <string name="email_already_registered">Email ya registrado</string>
+    <string name="title_activity_register">Registrarse</string>
+    <string name="title_activity_carta">Carta</string>
+    <string name="title_activity_qr">QR</string>
+    <string name="action_new_table">Agregar Mesa</string>
+
+    <string name="table_name">Nombre</string>
+    <string name="table_capacity">Capacidad</string>
+    <string name="add_table">Agregar Mesa</string>
+    <string name="table_number">Mesa: #</string>
+    <string name="action_new_dish">Agregar plato</string>
+    <string name="new_drink">Agregar bebida</string>
+    <string name="action_new_drink">Agregar bebida</string>
+    <string name="description">Descripción</string>
+    <string name="price">Precio</string>
+    <string name="save">Agregar</string>
+    <string name="cannot_be_empty">No puede estar vacío</string>
+    <string name="need_permissions">En necesario aceptar los permisos</string>
+    <string name="adding">Agregando</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="dialog_confirm_cart">¿Desea cerrar la orden?</string>
+    <string name="dialog_cancel_order">¿Desea cancelar la orden?</string>
+    <string name="action_cancel_order">Cancelar orden</string>
+    <string name="title_activity_orders">Ordenes</string>
+</resources>

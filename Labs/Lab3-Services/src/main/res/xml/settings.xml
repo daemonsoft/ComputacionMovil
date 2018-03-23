@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Editar Perfil">
+        <EditTextPreference
+            android:id="@+id/settingsName"
+            android:key="name"
+            android:summary="Ingrese su Nombres"
+            android:title="Nombre" />
+        <EditTextPreference
+            android:id="@+id/settingsEmail"
+            android:key="email"
+            android:summary="Usuario de la app"
+            android:title="E-mail" />
+        <EditTextPreference
+            android:id="@+id/settingsPassword"
+            android:key="password"
+            android:summary="Contraseña privada"
+            android:title="Contraseña" />
+        <EditTextPreference
+            android:id="@+id/settingsAge"
+            android:key="age"
+            android:summary="Edad del usuario"
+            android:title="Edad" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="General">
+        <SwitchPreference
+            android:id="@+id/settingsKeepSesion"
+            android:defaultValue="true"
+            android:key="keep_logged"
+            android:summary="Cuando abra la aplicación siempre iniciará con la última sesión abierta"
+            android:title="Mantener Sesión" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notificaciones">
+        <CheckBoxPreference
+            android:id="@+id/settingsSendNotification"
+            android:key="notifications"
+            android:summary="Se le enviarán notifiaciones regularmente"
+            android:title="Autorizar Notificaciones" />
+        <CheckBoxPreference
+            android:id="@+id/settingsSoundNotification"
+            android:defaultValue="true"
+            android:key="sounds"
+            android:summary="Activa/Desactiva sonido al entrar una notificaiones"
+            android:title="Activar Sonido de Notificaiones" />
+    </PreferenceCategory>
+    <EditTextPreference
+        android:id="@+id/settingsMili"
+        android:key="mili"
+        android:summary="Milisegundos para actualizar los eventos"
+        android:inputType="number"
+        android:title="Tasa de actualiazción"
+        android:text="60000"/>
+</PreferenceScreen>

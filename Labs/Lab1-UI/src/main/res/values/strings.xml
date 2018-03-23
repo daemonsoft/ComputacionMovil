@@ -1,0 +1,41 @@
+<resources>
+    <string name="personal_info">Información Personal</string>
+    <string name="contact_info">Información de Contacto</string>
+    <string name="other_info">Otra Información</string>
+    <string name="name">Nombres</string>
+    <string name="lastname">Apellidos</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+    <string name="gender">Sexo:</string>
+    <string name="birthdate">Fecha de Nacimiento</string>
+    <string name="education">Educación</string>
+    <string name="next">Siguiente</string>
+    <string name="lab1">Lab 1</string>
+    <string-array name="education_array">
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universitaria</item>
+        <item>Otro</item>
+    </string-array>
+    <string name="telefonoHint">Telefono</string>
+    <string name="emailHint">E-mail</string>
+    <string name="ciudadHint">Ciudad</string>
+    <string name="paisHint">País</string>
+    <string name="direccionHint">Direccion</string>
+    <string name="fechanatoHint">Fecha de Nacimiento</string>
+    <string name="hobbby">Pasatiempos</string>
+    <string name="read">Leer</string>
+    <string name="watch_tv">Ver TV</string>
+    <string name="dance">Bailar</string>
+    <string name="sing">Cantar</string>
+    <string name="swim">Nadar</string>
+    <string name="show">Mostrar</string>
+    <string name="show_info">Información ingresada</string>
+    <string name="stars">Estrellas</string>
+    <string name="resume_data">Resumen de los datos de la persona:</string>
+    <string name="other">Otro</string>
+    <string name="university">Universidad</string>
+    <string name="college">Secundaria</string>
+    <string name="school">Primaria</string>
+    <string name="all_data">Ingrese todos los campos</string>
+</resources>

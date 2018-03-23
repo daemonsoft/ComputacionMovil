@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="co.edu.udea.compumovil.gr04_20171.lab2.fragments.AboutFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_events"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:textAlignment="center"
+        android:textColor="#ccc"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.23"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/about_daemonsoft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/daemonsoft"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/about_rem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rem5742"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/about_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_rights_reserved"
+        android:textAlignment="center"
+        android:textColor="#ccc"
+        android:textSize="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">MobileEvents</string>
+
+    <!-- Strings related to login -->
+    <string name="action_sign_in">Ingresar</string>
+
+    <string name="settings">Configuración</string>
+    <string name="no_account_yet_create_one">¿No tiene cuenta? Regístrese</string>
+    <string name="create_account">Registrarse</string>
+    <string name="already_a_member_login">¿Ya es miembro? Ingresar</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="name">Nombre</string>
+    <string name="mobile_events">MobileEvents</string>
+    <string name="creating_account">Creando cuenta…</string>
+    <string name="creating_event">Creando evento…</string>
+    <string name="keep_logged">Mantener sesión</string>
+    <string name="action_sign_out">Cerrar sesión</string>
+
+
+    <string name="event_points">Puntuación: </string>
+    <string name="points">…</string>
+    <string name="details">Detalles</string>
+    <string name="new_event">Nuevo evento</string>
+    <string name="account">Perfil</string>
+    <string name="about">Acerca</string>
+    <string name="auth">Autenticando…</string>
+    <string name="account_created">Cuenta creada</string>
+    <string name="login_failed">Ingreso fallido</string>
+    <string name="enter_valid_email">Ingrese un email válido</string>
+    <string name="between_chars">Dede ser entre 4 y 10 caracteres</string>
+    <string name="events">Eventos</string>
+    <string name="least_chars">Debe usar al menos 3 caracteres</string>
+    <string name="email_already_registered">Email ya registrado</string>
+    <string name="needed_permissions">Los permisos son necesarios para poder usar la aplicación</string>
+    <string name="take_picture">Tomar foto</string>
+    <string name="choose_gallery">Elegir de galeria</string>
+    <string name="cancel">Cancelar</string>
+    <string name="choose_option">Elige una opción</string>
+    <string name="choose_app_image">Selecciona App de imagen</string>
+    <string name="granted_permissions">Permisos aceptados</string>
+    <string name="denied_permissions">Permisos denegados</string>
+    <string name="need_permissions">Para usar las funciones de la app necesitas aceptar los permisos</string>
+    <string name="accept">Aceptar</string>
+    <string name="not_entered">No ingresada</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="title_activity_register">Register</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="search">Buscar</string>
+    <string name="save">Guardar</string>
+    <string name="place">Lugar</string>
+    <string name="longitude">Longitud</string>
+    <string name="latitude">Latitud</string>
+    <string name="date">Fecha</string>
+    <string name="description">Descripción</string>
+    <string name="event_name">Nombre del Evento</string>
+    <string name="age">Edad</string>
+    <string name="version">Versión 1.0</string>
+    <string name="all_rights_reserved">Todos los derechos reservados.</string>
+    <string name="copyright">© 2017 Computación Móvil - UdeA</string>
+    <string name="daemonsoft">\@daemonsoft</string>
+    <string name="rem5742">\@rem5742</string>
+    <string name="owner_name">Responsable</string>
+    <string name="name_not_empty">Nombre no puede ser vacío</string>
+    <string name="description_not_empty">Descripción no puede ser vacia</string>
+    <string name="enter_latitude">Debe ingresar una coordenada de latitud.</string>
+    <string name="enter_longitude">Debe ingresar una coordenada de longitud</string>
+    <string name="enter_place">Debe ingresar el nombre del lugar del evento</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="sync">Actualizar</string>
+
+</resources>

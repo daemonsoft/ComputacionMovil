@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:name="co.edu.udea.compumovil.gr04_20171.lab2.fragments.eventsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="LinearLayoutManager"
+    tools:context="co.edu.udea.compumovil.gr04_20171.project.activities.MainActivity"
+    tools:listitem="@layout/card_table" />

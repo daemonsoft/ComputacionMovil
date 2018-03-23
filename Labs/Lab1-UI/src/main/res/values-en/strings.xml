@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="personal_info">Personal Information</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="other_info">Other Info</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="lastname">Lastname</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender:</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="education">Education</string>
+    <string name="next">Next</string>
+    <string name="lab1">Lab 1</string>
+    <string-array name="education_array">
+        <item>School</item>
+        <item>College</item>
+        <item>University</item>
+        <item>Other</item>
+    </string-array>
+    <string name="fechanatoHint">Birth Date</string>
+    <string name="telefonoHint">Phone</string>
+    <string name="emailHint">E-mail</string>
+    <string name="ciudadHint">City</string>
+    <string name="paisHint">Country</string>
+    <string name="direccionHint">Address</string>
+    <string name="hobbby">Hobby</string>
+    <string name="read">Read</string>
+    <string name="watch_tv">Watch TV</string>
+    <string name="dance">Dance</string>
+    <string name="sing">Sing</string>
+    <string name="swim">Swim</string>
+    <string name="show">Show</string>
+    <string name="show_info">All Info</string>
+    <string name="stars">Stars</string>
+    <string name="resume_data">Data resume:</string>
+    <string name="other">Other</string>
+    <string name="university">University</string>
+    <string name="college">College</string>
+    <string name="school">School</string>
+    <string name="all_data">Complete all data</string>
+</resources>

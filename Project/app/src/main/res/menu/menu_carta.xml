@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.edu.udea.compumovil.gr04_20171.project.activities.MenuActivity">
+    <item
+        android:id="@+id/action_cancel_order"
+        android:orderInCategory="300"
+        android:title="@string/action_cancel_order"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_new_drink"
+        android:orderInCategory="200"
+        android:title="@string/action_new_drink"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_new_dish"
+        android:orderInCategory="100"
+        android:title="@string/action_new_dish"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_shopping_cart_white_48dp"
+        android:orderInCategory="50"
+        android:title="Factura"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_bell"
+        android:icon="@drawable/ic_assignment_turned_in_white_48dp"
+        android:orderInCategory="40"
+        android:title="Atender"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>

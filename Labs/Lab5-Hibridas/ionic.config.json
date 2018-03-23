@@ -1,0 +1,11 @@
+{
+  "name": "Lab5-Hibridas",
+  "app_id": "21a768ce",
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/rest/events",
+      "proxyUrl": "https://api-mobileevents.rhcloud.com"
+    }  
+  ]
+}

@@ -1,0 +1,296 @@
+<html>
+<head>
+	<title>Online</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/icon.css?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/firebase.js"></script>
+	<script src="js/firebase.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
+		window.addEventListener('load', () => {
+			$('.modal').modal();
+
+
+			// var slider = document.getElementById('test5');
+			// noUiSlider.create(slider, {
+			//  start: [20, 80],
+			//  connect: true,
+			//  step: 1,
+			//  range: {
+			// 	 'min': 0,
+			// 	 'max': 100
+			//  },
+			//  format: wNumb({
+			// 	 decimals: 0
+			//  })
+			// });
+
+			firebase.initializeApp(config);
+			var promise = firebase.auth().signInWithEmailAndPassword('rem5742@gmail.com', 'david2475');
+			// auth.createUserWithEmailAndPassword(email, pass);
+			// auth.signOut();
+
+			firebase.auth().onAuthStateChanged(firebaseUser => {
+				// Valida el usuario
+				if (firebaseUser)
+				{
+					dbReference = firebase.database().ref(dbRefStr);
+					dbReference.child('table/'+TID).once('value').then(snap => {
+						// Valida mesa vacia
+						var tableObj = snap.val();
+						var guid = localStorage.getItem('guid') || false;
+
+						if (tableObj.free == true || (guid == tableObj.guid && tableObj.service != 'close'))
+						{
+							document.querySelector('#loader').classList.add('hidden');
+
+							if (tableObj.free == true)
+								dbReference.child('table/'+TID+'/service').set('wait');
+							else
+							{
+								document.querySelector('#wait').classList.add('hidden');
+								document.querySelector('#btns').classList.add('show');
+							}
+
+							dbReference.child('table/'+TID+'/service').on('value', snap => {
+								switch (snap.val())
+								{
+									case 'check':
+										guid = guid || GUID();
+										localStorage.setItem('guid', guid);
+										dbReference.child('table/'+TID+'/guid').set(guid);
+									case 'serve':
+										document.querySelector('#wait').classList.add('hidden');
+										document.querySelector('#btns').classList.add('show');
+										break;
+									case 'facture':
+									case 'order':
+										document.querySelector('#wait').classList.remove('hidden');
+										document.querySelector('#btns').classList.remove('show');
+										break;
+									case '':
+										document.querySelector('#wait').classList.add('hidden');
+										document.querySelector('#btns').classList.remove('show');
+										$('#modal-calificacion').modal({
+											complete: function(){
+												window.location.replace('https://a-la-orden-e8295.firebaseapp.com/exit.html');
+											}
+										});
+										$('#modal-calificacion').modal('open');
+										break;
+								}
+							});
+
+							dbReference.child('menu').once('value').then(snap => {
+								var menu = snap.val();
+								var collection = document.querySelector('#menu-dish .collection.dish');
+								collection.innerHTML = '';
+								for (key in menu.dishes)
+								{
+									var dish = menu.dishes[key];
+									var li = document.createElement('li');
+									var img = document.createElement('img');
+									var span = document.createElement('span');
+									var p = document.createElement('p');
+									var a = document.createElement('span');
+									
+									li.classList.add('collection-item');
+									li.classList.add('avatar');
+									img.classList.add('circle');
+									span.classList.add('title');
+									a.classList.add('secondary-content');
+									
+									img.src = dish.picture;
+									span.innerText = dish.name;
+									p.innerText = dish.description;
+									a.innerText = dish.price;
+
+									li.append(img);
+									li.append(span);
+									li.append(p);
+									li.append(a);
+									collection.append(li);
+								}
+
+								var collection = document.querySelector('#menu-drink .collection.drink');
+								collection.innerHTML = '';
+								for (key in menu.drinks)
+								{
+									var dish = menu.drinks[key];
+									var li = document.createElement('li');
+									var img = document.createElement('img');
+									var span = document.createElement('span');
+									var p = document.createElement('p');
+									var a = document.createElement('span');
+									
+									li.classList.add('collection-item');
+									li.classList.add('avatar');
+									img.classList.add('circle');
+									span.classList.add('title');
+									a.classList.add('secondary-content');
+									
+									img.src = dish.picture;
+									span.innerText = dish.name;
+									p.innerText = dish.description;
+									a.innerText = dish.price;
+
+									li.append(img);
+									li.append(span);
+									li.append(p);
+									li.append(a);
+									collection.append(li);
+								}
+							});
+						}
+						else
+						{
+							$('#modal-ocupada').modal('open');
+							console.log('La mesa está ocupada', guid ,tableObj)
+						}
+					});
+				}
+				else
+				{
+					$('#modal-ocupada').modal('open');
+					console.log('No encontró el usuario');
+					$('#modal-error').modal('open');
+				}
+			});
+
+			promise.then(e => {});
+			promise.catch(e => {});
+		});
+	</script>
+</head>
+<body>
+
+	<div id="listmenu" class="modal modal-fixed-footer">
+		<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">Menú</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="sass.html"></a></li>
+				<li><a href="badges.html"></a></li>
+				<li><a href="collapsible.html"></a></li>
+			</ul>
+		</div>
+		</nav>
+		<ul class="tabs">
+			<li class="tab col s3"><a class="active" href="#menu-dish">Platos</a></li>
+			<li class="tab col s3"><a href="#menu-drink">Bebidas</a></li>
+			<!-- <li class="tab col s3"><a href="#test3">Pedido</a></li> -->
+		</ul>
+		<div class="row">
+			<div id="menu-dish" class="col s12">
+				<div class="row">
+					<ul class="collection dish">
+					</ul>
+				</div>
+			</div>
+			<div id="menu-drink" class="col s12">
+				<div class="row">
+					<ul class="collection drink">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+		</div>
+	</div>
+	<div id="wrapper">
+		<h3 id="title">A la Orden!</h3>
+		<img style="padding: 0 80px;" src="img/logo_round.png" class="responsive-img">
+		<h6 id="wait">
+			<br>
+			Su mesero está en camino...
+			<br>
+			<br>
+			<br>
+			<div id="loader-icon" class="preloader-wrapper big active">
+				<div class="spinner-layer spinner-blue-only">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div><div class="gap-patch">
+						<div class="circle"></div>
+					</div><div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+		</h6>
+		<div id="btns">
+			<div id="btnFacture" class="waves-effect btn btn-large">Pedir Factura</div>
+			<div id="btnService" class="btn btn-large">Llamar al mesero</div>
+		</div>
+			<div id="btnCheck" class="btn btn-large" style="display: none;">Test: Checkear</div>
+			<div id="btnReset" class="btn btn-large" style="display: none;">Test: Reset</div>
+	</div>
+	<div id="loader">
+		<div id="loader-icon" class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-blue-only">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="modal-ocupada" class="modal">
+		<div class="modal-content">
+			<h4>A la Orden!</h4>
+			<p>La mesa se encuentra ocupada</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="modal-error" class="modal">
+		<div class="modal-content">
+			<h4>A la Orden!</h4>
+			<p>Error registrando la mesa, comuníquese con el administrador.<br>Gracias!</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="modal-calificacion" class="modal">
+		<div class="modal-content">
+			<h4>A la Orden!</h4>
+			<p>Califica el servicio por favor!</p>
+			<span class="rating">
+				<input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				<label for="rating-input-1-5" class="rating-star"></label>
+				<input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				<label for="rating-input-1-4" class="rating-star"></label>
+				<input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				<label for="rating-input-1-3" class="rating-star"></label>
+				<input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				<label for="rating-input-1-2" class="rating-star"></label>
+				<input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				<label for="rating-input-1-1" class="rating-star"></label>
+			</span>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>
+		</div>
+	</div>
+
+	<a id="menuBtn" class="btn-floating btn-large waves-effect waves-light red" data-target="listmenu">
+		<i class="material-icons">shopping_cart</i>
+	</a>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
